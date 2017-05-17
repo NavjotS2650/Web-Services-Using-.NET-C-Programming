@@ -1,0 +1,5 @@
+c:\users\navjot singh\documents\visual studio 2017\Projects\bankcharge\bankcharge\bin\Debug\bankcharge.exe.config
+c:\users\navjot singh\documents\visual studio 2017\Projects\bankcharge\bankcharge\bin\Debug\bankcharge.exe
+c:\users\navjot singh\documents\visual studio 2017\Projects\bankcharge\bankcharge\bin\Debug\bankcharge.pdb
+c:\users\navjot singh\documents\visual studio 2017\Projects\bankcharge\bankcharge\obj\Debug\bankcharge.exe
+c:\users\navjot singh\documents\visual studio 2017\Projects\bankcharge\bankcharge\obj\Debug\bankcharge.pdb

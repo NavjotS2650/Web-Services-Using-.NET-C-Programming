@@ -1,0 +1,5 @@
+c:\users\navjot singh\documents\visual studio 2017\Projects\fireviolation\fireviolation\bin\Debug\fireviolation.exe.config
+c:\users\navjot singh\documents\visual studio 2017\Projects\fireviolation\fireviolation\bin\Debug\fireviolation.exe
+c:\users\navjot singh\documents\visual studio 2017\Projects\fireviolation\fireviolation\bin\Debug\fireviolation.pdb
+c:\users\navjot singh\documents\visual studio 2017\Projects\fireviolation\fireviolation\obj\Debug\fireviolation.exe
+c:\users\navjot singh\documents\visual studio 2017\Projects\fireviolation\fireviolation\obj\Debug\fireviolation.pdb
