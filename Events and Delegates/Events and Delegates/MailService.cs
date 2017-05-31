@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Events_and_Delegates
+namespace Events_and_delegates
 {
     class MailService
     {
-        //we want the method tto match the delegate signature
-        public void OnvideoEncoded(object source, EventArgs)
+        //We want the method to match the delegate signatures
+        public void OnVideoEncoded(object source, EventArgs args)
         {
-            Console.WriteLine("mailservice is working");
+            Console.WriteLine("Mail Service is Working");
         }
     }
 }

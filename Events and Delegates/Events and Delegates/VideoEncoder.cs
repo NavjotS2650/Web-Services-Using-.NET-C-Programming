@@ -3,40 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
-namespace Events_and_Delegates
-{ /*now we want to implement an event in videoencoder 
-    *such that when the encloading is finished, it notifies anyone interested in the event.
-    */
-
-    //1.define a delegate.
-    //2. define an event based on that delegate.
-    //3. raise the event.
-
-    // 1. create ou delegate
-    //the delegate is a pointer /reference to the methodd below
-    public delegate void VideoEncoderEventHandler(object source, EventArgs args);
-
-    //2. lets creates an event
-    public event VideoEncoderEventHandler VideoEncoded;
-
+namespace Events_and_delegates
+{
     class VideoEncoder
     {
-       public void encode(Video video)
-        {
-            Thread.Sleep(2000);
-            Console.WriteLine("the sleep videoencoder");
-            OnVideoEncoded();//3 raising the event notifyinf all the subscribers
+        /*Now we want to implement an event in VideoEncoder
+         * Such that when the encoding os finished , it notifies any one interested in event
+         * */
+        //1. Define a delegate
+        //2. deifine an event based on that delegate
+        //3. raise the event
 
+
+        //Create our delegate
+        // Delegate is a pointer or references to the method below
+        public delegate void VideoEncoderEventHandler(object source, EventArgs args);
+        
+        //2 now lets create an event 
+        public event VideoEncoderEventHandler videoEncoded;
+        
+
+
+        public void Encode(Video video)
+        {
+           
+            Thread.Sleep(3000);
+            Console.WriteLine("Encoding a Video: ");
+            OnVideoEncoded();//3. Raising the event
+            //notifiiying all subscribers 
         }
 
         protected virtual void OnVideoEncoded()
         {
-            if (VideoEncoder != null)//if null,=> subscribers;
-                VideoEncoder(this, EventArgs.Empty);//this calls th esubscroibwers
-            //this=>refers 5o the current
-            //eventargs.empty=>
-
+            if (videoEncoded !=null) //if null -> no subscribers
+            {
+                videoEncoded(this, EventArgs.Empty);// this calls the subscribers
+            }                                       // and passes 2 arguments
+            // this -> refers to the current
+            // EventArgs.Empty -> we are not sending additional info to the subscribers
         }
     }
 }

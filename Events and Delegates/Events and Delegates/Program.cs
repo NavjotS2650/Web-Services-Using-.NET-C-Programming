@@ -4,18 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Events_and_Delegates
+namespace Events_and_delegates
 {
     class Program
     {
         static void Main(string[] args)
         {
             Video video = new Video();
-            video.Title = "Alien Covenent";
-            VideoEncoder videoencoder = new VideoEncoder();//publisher
-            MailService mailService = new MailService();//subscriber
-            videoencoder.videoEncoded = mailService.OnvideoEncoded;//a pointer reference to the 
-            videoencoder.encode(video);
+            video.Title = "Alien Covenant";
+            VideoEncoder videoEncoder = new VideoEncoder();// publisher
+            MailService mailSerivice = new MailService();// Subscriber;
+            
+            
+            
+            videoEncoder.videoEncoded += mailSerivice.OnVideoEncoded;// pointer /references to the method
+           
+            MessageService messageService = new MessageService(); // Another subscriber
+
+            videoEncoder.videoEncoded += messageService.OnVideoEncoded;
+            
+            videoEncoder.Encode(video);
+
             Console.ReadKey();
         }
     }

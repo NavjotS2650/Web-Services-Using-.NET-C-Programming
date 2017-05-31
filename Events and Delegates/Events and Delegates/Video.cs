@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Events_and_Delegates
+namespace Events_and_delegates
 {
     class Video
     {
-        public string Title { get; set; }
+        public string Title
+        {
+            set;
+            get;
+        }
     }
 }
